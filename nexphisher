@@ -9,7 +9,7 @@ user_interrupt(){
         printf "\e[0m\e[1;36m\t CTRL + C Pressed !!\n"
         sleep 2
         printf "\e[0m\n"
-        printf " \e[0m\e[1;42m Thanks for Using This Tool !!\e[0m  \e[1;44m Visit https://github.com/htr-tech for more\e[0m\n"
+        printf " \e[0m\e[1;42m Thanks for Using This Tool !!"
         printf "\e[0m\n"
         exit 1
 }
@@ -84,10 +84,10 @@ smallbanner() {
 clear
 printf "**********************************************************************************"\
 printf "\tPhishing Tool made by - "
-printf "\t   Rishi Rajpal 19BCY10027"
-printf "\t   Sripathi 19BCY10123"
-printf "\t   Shivam Agrawal 19BCY10140"
-printf "\t   Krishna Agrawal 19BCY10177\n\n"
+printf "\t   Rishi Rajpal 19BCY10027\n"
+printf "\t   Sripathi 19BCY10123\n"
+printf "\t   Shivam Agrawal 19BCY10140\n"
+printf "\t   Krishna Agrawal 19BCY10177\n"
 printf "\t   Students of VIT Bhopal University.\n"
 
 
