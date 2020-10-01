@@ -66,7 +66,32 @@ mkdir .htr/www
 fi
 
 }
+banner() {
 
+clear
+printf "**********************************************************************************"\
+printf "\tPhishing Tool made by - "
+printf "\t   Rishi Rajpal 19BCY10027"
+printf "\t   Sripathi 19BCY10123"
+printf "\t   Shivam Agrawal 19BCY10140"
+printf "\t   Krishna Agrawal 19BCY10177\n\n"
+printf "\t   Students of VIT Bhopal University."
+
+printf "**********************************************************************************"
+
+}
+
+smallbanner() {
+
+clear
+printf "           ***    ******         *  *******   "
+printf "         *        *   *          *       *    "
+printf "       *    ***   *  *           *      *     "
+printf "       *       *  ***     *****  *     *      "
+printf "         *    *   *  *           *    *       "
+printf "           ***    *    *         *   *        "
+
+}
 
 menu() {
 
