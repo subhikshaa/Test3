@@ -218,6 +218,9 @@ fi
 
 about() {
 
+banner
+smallbanner
+
 printf " \e[0m\e[91m[\e[0m00\e[0m\e[91m]\e[0m\e[93m Home           \e[0m\e[91m[\e[0m99\e[0m\e[91m]\e[0m\e[93m Exit\e[0m\n"
 printf "\e[0m\n"
 read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Select an option: \e[0m\e[1;96m\en' about_option
@@ -259,6 +262,7 @@ cp -f .Modules/ip.php .htr/www/
 
 def_tunnel_menu="2"
 smallbanner
+printf " Available Port-Forwading Options - "
 printf "\e[0m\e[91m [\e[0m01\e[0m\e[91m]\e[0m\e[93m LocalHost\e[0m\n"
 printf "\e[0m\e[91m [\e[0m02\e[0m\e[91m]\e[0m\e[93m Ngrok\e[0m\n"
 printf "\e[0m\n"
