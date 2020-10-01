@@ -69,14 +69,14 @@ fi
 banner() {
 
 clear
-printf "***********************************************************"
-printf "           ***    ******         *  *******   "
-printf "         *        *   *          *       *    "
-printf "       *    ***   *  *           *      *     "
-printf "       *       *  ***     *****  *     *      "
-printf "         *    *   *  *           *    *       "
-printf "           ***    *    *         *   *        "
-printf "   PHISHING TOOL - A Project By Grp-17 "
+printf "***********************************************************\n"
+printf "        ***    ******         *  *******   \n"
+printf "      *        *   *          *       *    \n"
+printf "    *    ***   *  *           *      *     \n"
+printf "    *       *  ***     *****  *     *      \n"
+printf "      *    *   *  *           *    *       \n"
+printf "        ***    *    *         *   *        \n"
+printf "   PHISHING TOOL - A Project By Grp-17 \n"
 printf "***********************************************************"
 }
 
