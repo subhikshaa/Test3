@@ -69,7 +69,7 @@ fi
 banner() {
 
 clear
-printf "**********************************************************************************"
+printf "***********************************************************"
 printf "           ***    ******         *  *******   "
 printf "         *        *   *          *       *    "
 printf "       *    ***   *  *           *      *     "
@@ -77,19 +77,19 @@ printf "       *       *  ***     *****  *     *      "
 printf "         *    *   *  *           *    *       "
 printf "           ***    *    *         *   *        "
 printf "   PHISHING TOOL - A Project By Grp-17 "
-printf "**********************************************************************************"
+printf "***********************************************************"
 }
 
 smallbanner() {
 clear
-printf "**********************************************************************************"\
+printf "***********************************************************"
 printf "\tPhishing Tool made by - "
 printf "\t   Rishi Rajpal 19BCY10027\n"
 printf "\t   Sripathi 19BCY10123\n"
 printf "\t   Shivam Agrawal 19BCY10140\n"
 printf "\t   Krishna Agrawal 19BCY10177\n"
 printf "\t   Students of VIT Bhopal University.\n"
-
+printf "***********************************************************"
 
 }
 
